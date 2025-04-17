@@ -1,0 +1,1 @@
+students.find(student=>student.marks==90)
