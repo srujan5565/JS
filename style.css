@@ -1,0 +1,54 @@
+body{
+    background-color: burlywood;
+    display:flex; /* The flex container becomes flexible by setting the display property to flex*/
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    background-color:rgb(85, 109, 130);
+    width: 300px;
+    border-radius: 15px;
+    box-shadow:-10px 10px 100px rgb(160, 168, 176) ;/*box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+    overflow: hidden;
+    text-align: center;
+    color: antiquewhite;
+    padding: 20px;
+    box-sizing: border-box;/* If you set box-sizing: border-box; on an element, padding and border are included in the width and height*/
+}
+.image img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+.content h4,
+.content p {
+  margin: 10px 0;
+  font-family:cursive;
+}
+
+.follow-btn{
+    background-color: white;
+    color: rgb(63, 97, 127);
+    border: none;
+    padding: 10px 20px; 
+    font-weight: bold;
+    font-size: medium;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 1s ease;
+}
+
+.follow-btn:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.05);
+    color: #000;
+  }
+
+  @media (max-width:400px){
+    .card{
+        width: 90%;
+    }
+  }

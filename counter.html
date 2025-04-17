@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f0f0f0;
+        }
+        
+        .Counter-board,.Counter-modifiers{
+            display: inline-block;
+        }
+
+        .Counter-board h3 {
+            font-size: 2rem;
+            display: inline;
+        }
+        
+        .Counter-modifiers input {
+            font-size: 2rem;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            transition: 0.3s ease;
+        }
+        
+        .Counter-modifiers input:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="Counter-board">
+        <h3>Counter : </h3>
+        <h3 class="count">0</h3>
+    </div>
+    <div class="Counter-modifiers">
+        <input type="button" class="plus" value="➕">
+        <input type="button" class="minus" value="➖">
+    </div>
+    <script>
+        window.onload = function() {
+        let count=0;
+        const countDisplay = document.querySelector(".count");
+        const plus = document.querySelector(".plus"); // Returns the first occuring .plus class element 
+        const mius = document.getElementsByClassName("minus")[0];//Because it return collection of "minus" class elements and index should be specified
+        plus.addEventListener("click",function(){
+            count++;
+            countDisplay.innerHTML=count;
+        });
+        mius.addEventListener("click",function(){
+            if(count==0){
+                alert("Count should be greater than or equal to 0");
+                return;
+            }
+            count--;
+            countDisplay.innerHTML=count;
+        });
+    }
+    </script>
+</body>
+</html>

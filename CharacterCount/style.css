@@ -1,0 +1,14 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    margin-top: 50px;
+  }
+  textarea {
+    font-size: 16px;
+    padding: 10px;
+  }
+  p {
+    font-size: 14px;
+    color: gray;
+  }
+  
